@@ -1,14 +1,24 @@
 // Create an Array of at least 3 losing messages
-
+var losing = ['Too bad, so sad!', 'Better luck next time!', 'So close yet so far!']
 // Create variables to count wins and losses
-
+var winCount = 0
+var lossCount = 0
 // Create variables that target elements with the following IDs: 'message', 'wins', 'losses'
-
+var message = document.getElementById('message')
+var wins = document.getElementById('wins')
+var losses = document.getElementById('losses')
 // target all .box elements and attach a click event listener to each one using a loop
+var boxes = document.getElementsByClassName('box')
+for (var i = 0; i < boxes.length; i++) {
+    var boxElement = boxes[i];
+    // within each click event...
+    // determine which box was clicked with 'this.textContent' or event.target.textContent
+    // convert that value to a Number and store it to a variable
+    boxElement.onclick = function(event) {
+        var boxNum = Number(event.target.textContent)
+    }
+}
 
-// within each click event...
-// determine which box was clicked with 'this.textContent' or event.target.textContent
-// convert that value to a Number and store it to a variable
 
 // create a random number between 1-3 and store it to a variable
 // This number will represent the winning box
